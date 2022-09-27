@@ -96,6 +96,17 @@ button:hover {
   color: #fff;
 }
 
+/* Grid */
+
+.grid {
+  display: grid;
+  grid-template-columns: 25% 25%;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  gap: 14rem;
+}
+
 @media (max-width: 900px) {
   .hamburger-menu {
     display: flex;
@@ -133,5 +144,9 @@ button:hover {
 
   .navbar-end-button.active {
     display: block;
+  }
+
+  .hero-text h1 {
+    text-align: center;
   }
 }
