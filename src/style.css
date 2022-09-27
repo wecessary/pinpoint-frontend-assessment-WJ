@@ -71,11 +71,37 @@ body {
     display: flex;
   }
 
-  .navbar-links ul {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    width: 100%;
     display: none;
   }
 
-  .navbar-end-button button {
+  .navbar-links ul {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .navbar-links li {
+    text-align: center;
+  }
+
+  .navbar-end-button {
     display: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 0.4rem;
+  }
+
+  .navbar-links.active {
+    display: block;
+  }
+
+  .navbar-end-button.active {
+    display: block;
   }
 }
