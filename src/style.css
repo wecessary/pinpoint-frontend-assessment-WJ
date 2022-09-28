@@ -12,7 +12,7 @@ button {
   background-color: #2fa38d;
   color: #fff;
   border: none;
-  border-radius: 10%;
+  border-radius: 8px;
   padding: 0.75rem;
   font-weight: bold;
 }
@@ -24,7 +24,7 @@ button:hover {
 .button-with-arrow {
   display: flex;
   justify-content: space-between;
-  width: 150px;
+  width: 170px;
 }
 
 /* Navbar */
@@ -98,16 +98,65 @@ button:hover {
 
 /* Grid */
 
-.grid {
+.grid-container {
   display: grid;
-  grid-template-columns: 25% 25%;
+  grid: auto-flow dense / repeat(2, 30%);
   justify-content: center;
-  justify-items: center;
+  align-items: start;
+  gap: 5rem;
+  margin-top: 2.5rem;
+}
+
+/* (4n-1) so that 3rd, 7th, 11th etc grid cells are put in the second column, 
+    which are the cells containning the text.
+    Having set grid:auto-flow dense means that the images will come and fill the first column that these
+    text cells don't fill.
+    */
+
+.grid:nth-child(4n-1) {
+  grid-column: 2;
+}
+
+.grid-text p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #696969;
+}
+
+.grid-text h1 {
+  margin: 0;
+  font-size: 2.3rem;
+}
+
+.grid-image img {
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+.image-as-background {
+  display: flex;
+  /* flex-flow: nowrap; */
   align-items: center;
-  gap: 14rem;
+  /* justify-content: flex-start; */
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.image-as-background > div {
+  position: absolute;
+  max-width: 200px;
+  margin: 0;
+  padding: 0.5rem;
+  /* word-break: break-word; */
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media (max-width: 900px) {
+  /* Navbar */
   .hamburger-menu {
     display: flex;
   }
@@ -145,8 +194,31 @@ button:hover {
   .navbar-end-button.active {
     display: block;
   }
-
+  /* Hero */
   .hero-text h1 {
     text-align: center;
+  }
+  /* Grid */
+  .grid-container {
+    grid: auto-flow / repeat(1, 80%);
+    gap: 1rem;
+  }
+
+  .grid:nth-child(4n-1) {
+    grid-column: 1;
+  }
+
+  .grid-image:nth-child(-n + 4) {
+    margin-bottom: 2.5rem;
+  }
+
+  .image-as-background > div {
+    max-width: 100px;
+    font-size: 0.4rem;
+  }
+
+  .image-as-background button {
+    font-size: 0.7rem;
+    max-width: 80px;
   }
 }
