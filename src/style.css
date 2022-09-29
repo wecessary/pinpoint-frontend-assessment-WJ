@@ -5,7 +5,26 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+.text-align-end {
+  text-align: end;
+}
+.m0 {
+  margin: 0;
+}
+
+.mt-m {
+  margin-top: 2.5rem;
+}
+
+.mb-m {
+  margin-bottom: 2.5rem;
+}
+
+.my-m {
+  margin: 2.5rem 0;
 }
 
 button {
@@ -190,10 +209,6 @@ button:hover {
   text-align: center;
 }
 
-.glassdoor img {
-  /* margin: 10rem 0 2rem; */
-}
-
 .glassdoor button {
   background-color: #04ab3e;
   width: 130px;
@@ -235,7 +250,30 @@ button:hover {
   text-align: center;
 }
 
+.footer-container h3 {
+  margin: 0%;
+}
+
+.grid-two-column {
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: repeat(2, 30%);
+  grid-template-areas: "col-1 col-2";
+  justify-content: center;
+}
+
+footer p {
+  margin: 0;
+  color: #2d5046;
+  font-size: 0.7rem;
+}
+
 @media (max-width: 900px) {
+  .sm-grid-one-column {
+    grid-template-columns: repeat(1, 80%);
+    gap: 0;
+  }
+
   /* Navbar */
   .hamburger-menu {
     display: flex;
