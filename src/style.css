@@ -17,6 +17,10 @@ button {
   font-weight: bold;
 }
 
+img {
+  border-radius: 10px;
+}
+
 button:hover {
   background-color: #8db38b;
 }
@@ -25,6 +29,18 @@ button:hover {
   display: flex;
   justify-content: space-between;
   width: 170px;
+}
+
+.flex-row-container {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-column-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Navbar */
@@ -155,6 +171,70 @@ button:hover {
   align-items: center;
 }
 
+/* Glassdoor and CEO */
+.glassdoor-CEO {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  height: 75vh;
+  margin-top: 5rem;
+}
+
+.glassdoor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.glassdoor img {
+  /* margin: 10rem 0 2rem; */
+}
+
+.glassdoor button {
+  background-color: #04ab3e;
+  width: 130px;
+  font-weight: normal;
+}
+
+.glassdoor-CEO q {
+  padding: 50px 0 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.image-as-background > .text-container-on-CEO {
+  max-width: 300px;
+}
+
+.CEO img {
+  width: 100%;
+}
+
+/* card */
+
+.card-container {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  height: 250px;
+  width: 25%;
+  border-radius: 10px;
+  box-shadow: 0 1.5px 20px 3px #d3d3d3;
+  margin: 15px;
+}
+
+.card > h2 {
+  width: 60%;
+  word-break: break-word;
+  text-align: center;
+}
+
 @media (max-width: 900px) {
   /* Navbar */
   .hamburger-menu {
@@ -220,5 +300,24 @@ button:hover {
   .image-as-background button {
     font-size: 0.7rem;
     max-width: 80px;
+  }
+
+  .image-as-background > .text-container-on-CEO {
+    /* align-items: start; */
+    left: -60px;
+  }
+
+  .glassdoor-CEO q {
+    font-size: 0.5rem;
+    width: 50%;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
   }
 }
