@@ -4,29 +4,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-
+    <!-- END OF GOOGLE FONT -->
+    <link rel="stylesheet" href="style.css" />
     <title>GoCo Careers Page</title>
   </head>
   <body>
-    <!-- Navbar -->
-    <nav class="navbar">
+    <!-- NAVBAR -->
+    <nav class="navbar flex justify-between items-center">
       <div class="brand-logo">
-        <img src="./assets/goco-group-logo.png" alt="company-logo" />
+        <img src="./assets/goco-group-logo.png" alt="GoCo logo" />
       </div>
-      <a href="#" class="hamburger-menu">
+      <a
+        href="#"
+        class="hamburger-menu flex-col justify-between items-center absolute"
+      >
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
       </a>
       <div class="navbar-links">
-        <ul>
+        <ul class="flex nobullets gap-sm">
           <li><a href="#">Who we are</a></li>
           <li><a href="#">#LifeatGoCo</a></li>
           <li><a href="#">What's in it for you</a></li>
@@ -36,9 +40,11 @@
       </div>
       <div class="navbar-end-button"><button>View Jobs</button></div>
     </nav>
-    <!-- Hero -->
-    <div class="hero-image">
-      <div class="hero-text">
+    <!-- HERO -->
+    <div class="hero-image flex justify-center items-center">
+      <div
+        class="hero-text flex flex-col justify-center items-center grid-sm gap-sm"
+      >
         <h1>Find your next job with GoCo</h1>
         <button class="button-with-arrow">
           <span>Go for it</span>
@@ -46,9 +52,11 @@
         </button>
       </div>
     </div>
-    <!-- Grid -->
-    <div class="grid-container">
-      <div class="grid grid-text">
+    <!-- MAIN CONTENT -->
+    <section
+      class="main-content mt-lg grid grid-two-cols-30-30 justify-center gap-lg sm-grid-one-col"
+    >
+      <div class="col-alternate grid-text">
         <h1>Join us as we save time and money for people everywhere</h1>
         <p>
           Since 2006. we've been disrupting the insurance industry to save
@@ -61,13 +69,13 @@
           <span>Who we are</span> <span>></span>
         </button>
       </div>
-      <div class="grid grid-image">
+      <div class="col-alternate grid-image">
         <img
           src="./assets/picturesOfCompanies.png"
           alt="Pictures of company logos"
         />
       </div>
-      <div class="grid grid-text">
+      <div class="col-alternate grid-text">
         <h1>Collaborate, innovate and be proud</h1>
         <p>
           We want every member of staff to be happy, healthy and successful with
@@ -82,10 +90,10 @@
           <span>#LifeatGoCo</span> <span>></span>
         </button>
       </div>
-      <div class="grid grid-image">
+      <div class="col-alternate grid-image">
         <img src="./assets/excitedPeople.jpeg" alt="People looking excited" />
       </div>
-      <div class="grid grid-text">
+      <div class="col-alternate grid-text">
         <h1>Grow your GoCo career</h1>
         <p>
           We don't sit still, so neither should you have to. We strive to help
@@ -99,51 +107,81 @@
           <span>Employee journeys</span> <span>></span>
         </button>
       </div>
-      <div class="grid grid-image image-as-background">
-        <div>
-          <h2>Follow Emma's journey to finding her place at GoCo</h2>
-          <button class="button-with-arrow">
-            <span>Read</span><span>></span>
-          </button>
+      <div class="col-alternate grid-image flex items-center text-center">
+        <div class="absolute grid grid-two-cols-5-40">
+          <!--Empty div-->
+          <div></div>
+          <!-- End of empty div -->
+          <div class="flex flex-col items-center gap-xs">
+            <h3 class="text-vw-xxs sm-text-vw-s">
+              Follow Emma's journey to finding her place at GoCo
+            </h3>
+            <button class="text-70pc sm-text-vw-s w-70pc flex justify-between">
+              <span>Read</span><span>></span>
+            </button>
+          </div>
         </div>
         <img src="./assets/emma.jpeg" alt="Picture of Emma" />
       </div>
-    </div>
-    <!-- Glassdoor and CEO -->
-    <div class="glassdoor-CEO">
-      <div class="glassdoor">
+    </section>
+    <!-- TESTIMONY -->
+    <section
+      class="testimony flex flex-col justify-center items-center gap-lg mt-lg"
+    >
+      <div
+        class="glassdoor flex flex-col justify-center items-center text-center sm-w-vw-80"
+      >
         <img src="./assets/glassdoor_logotype.png" alt="glassdoor logo" />
-        <q>Dynamic, industry-leading environment with great benefits</q>
-        <p>Former Employee, Content Specialist in Newport, Wales</p>
-        <p>A selected review from Glassdoor, October 2020</p>
+        <h2 class="mt-md">
+          <q>Dynamic, industry-leading environment with great benefits</q>
+        </h2>
+        <p class="text-xs">
+          Former Employee, Content Specialist in Newport, Wales
+        </p>
+        <p class="text-xs">A selected review from Glassdoor, October 2020</p>
         <button class="button-with-arrow">
           <span>More reviews</span><span>></span>
         </button>
       </div>
 
-      <div class="image-as-background CEO">
-        <div class="text-container-on-CEO">
-          <q
-            >We support our people not only through their professional
-            development but also with their work-life balance, health and
-            wellbeing</q
-          >
-          <h3>Alex Currie</h3>
-          <p>Chief Police Officer</p>
+      <div class="flex items-center">
+        <div
+          class="text-in-lg-img absolute grid grid-two-cols-7-28 sm-text-vw-s"
+        >
+          <!--Empty div-->
+          <div></div>
+          <!-- End of empty div -->
+          <div>
+            <h3>
+              <q
+                >We support our people not only through their professional
+                development but also with their work-life balance, health and
+                wellbeing</q
+              >
+            </h3>
+            <h3 class="mt-sm">Alex Currie</h3>
+            <p class="sm-text-vw-s m-0 mt-sm">Chief People Officer</p>
+          </div>
         </div>
-        <img src="./assets/CEO.jpeg" alt="Picture of Alex Currie" />
+        <img
+          class="sm-w-vw-80"
+          src="./assets/CEO.jpeg"
+          alt="Picture of Alex Currie"
+        />
       </div>
-    </div>
+    </section>
 
-    <div class="card-container">
-      <div class="card flex-column-container">
-        <h2>Find out what's in it for you</h2>
+    <div
+      class="card-container flex justify-center items-center mt-lg sm-grid-one-col"
+    >
+      <div class="card flex flex-col justify-center items-center gap-sm">
+        <h2 class="text-center">Find out what's in it for you</h2>
         <button class="button-with-arrow">
           <span>Find out More</span><span>></span>
         </button>
       </div>
-      <div class="card flex-column-container">
-        <h2>Thinking about applying for a job?</h2>
+      <div class="card flex flex-col justify-center items-center gap-sm">
+        <h2 class="text-center">Thinking about applying for a job?</h2>
         <button class="button-with-arrow">
           <span>Search Jobs</span><span>></span>
         </button>
@@ -152,9 +190,13 @@
 
     <!-- Footer -->
     <footer>
-      <div class="grid-two-column sm-grid-one-column">
-        <div class="col-1 m-0">
-          <h3>We hire our talent directly. No recruitment agencies, sorry.</h3>
+      <div
+        class="grid grid-two-cols-30-30 justify-center gap-lg sm-grid-one-col mt-lg"
+      >
+        <div>
+          <h4 class="mb-m">
+            We hire our talent directly. No recruitment agencies, sorry.
+          </h4>
 
           <p>Copyright (C) 2020 Gocompare.com Limited All Rights Reserved</p>
           <p>
@@ -166,17 +208,29 @@
             NP10 8UH, United Kingdom
           </p>
           <p><a href="#">Modern Slavery Statement</a></p>
-          <p><a href="#">Cookie Policy Terms and Conditions</a>
-          </a></p>
-          <p><a href="#">Terms and Conditions</a>
-          </a></p>
+          <p><a href="#">Cookie Policy Terms and Conditions</a></p>
+          <p><a href="#">Terms and Conditions</a></p>
         </div>
-        <div class="col-2"></div>
+        <div></div>
       </div>
 
-      <div class="grid-two-column my-m">
-        <p class="col-1">PRIVACY POLICY</p>
-        <p class="col-2 text-align-end">POWERED BY PINPOINT</p>
+      <div class="grid grid-two-cols-30-30 justify-center my-m gap-lg">
+        <div class="flex gap-sm items-center">
+          <p class="font-bold">PRIVACY POLICY</p>
+          <a href="https://www.linkedin.com/in/wesley-m-h-jessie-7552b295/"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+              />
+            </svg>
+          </a>
+        </div>
+        <p class="font-bold text-end">POWERED BY PINPOINT</p>
       </div>
     </footer>
     <script src="script.js"></script>

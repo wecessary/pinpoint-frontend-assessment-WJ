@@ -1,3 +1,5 @@
+/* GENERAL STYLES */
+
 * {
   box-sizing: border-box;
 }
@@ -8,15 +10,157 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.text-align-end {
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.3rem;
+}
+
+p {
+  color: #696969;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+button {
+  background-color: #2fa38d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #8db38b;
+}
+
+img {
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  color: #56876d;
+}
+
+/* END OF GENERAL STYLES */
+
+/* UTILITY CLASSES */
+
+.nobullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-two-cols-30-30 {
+  grid-template-columns: repeat(2, 30%);
+}
+
+.grid-two-cols-5-40 {
+  grid-template-columns: 5% 40%;
+}
+
+.grid-two-cols-7-28 {
+  grid-template-columns: 7% 28%;
+}
+
+.gap-xs {
+  gap: 1rem;
+}
+
+.gap-sm {
+  gap: 2rem;
+}
+
+.gap-lg {
+  gap: 5rem;
+}
+
+.w-100pc {
+  width: 100%;
+}
+
+.w-70pc {
+  width: 70%;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-xs {
+  font-size: 0.7rem;
+}
+
+.text-70pc {
+  font-size: 70%;
+}
+
+.text-vw-xxs {
+  font-size: 1.5vw;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-end {
   text-align: end;
 }
+
+.absolute {
+  position: absolute;
+}
+
 .m0 {
   margin: 0;
 }
 
-.mt-m {
+.mt-sm {
+  margin-top: 0.5rem;
+}
+
+.mt-md {
   margin-top: 2.5rem;
+}
+
+.mt-lg {
+  margin-top: 5rem;
 }
 
 .mb-m {
@@ -27,79 +171,28 @@ body {
   margin: 2.5rem 0;
 }
 
-button {
-  background-color: #2fa38d;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 0.75rem;
-  font-weight: bold;
-}
-
-img {
-  border-radius: 10px;
-}
-
-button:hover {
-  background-color: #8db38b;
-}
-
 .button-with-arrow {
   display: flex;
   justify-content: space-between;
   width: 170px;
 }
 
-.flex-row-container {
-  display: flex;
-  justify-content: center;
-}
-
-.flex-column-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+/* END OF UTILITY CLASSES */
 
 /* Navbar */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin: 2rem;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .brand-logo img {
   height: 40px;
 }
 
-.navbar-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 2rem;
-}
-
-.navbar li a {
-  text-decoration: none;
-  color: #000;
-}
-
-.navbar-links li a:hover {
-  color: #56876d;
-}
-
 .hamburger-menu {
-  position: absolute;
   right: 1rem;
   top: 2.5rem;
   display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   width: 30px;
   height: 20px;
 }
@@ -113,9 +206,6 @@ button:hover {
 /* Hero */
 
 .hero-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 75vh;
   background-size: cover;
   background-image: url(./assets/hero-image.webp);
@@ -124,22 +214,13 @@ button:hover {
 }
 
 .hero-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
   color: #fff;
 }
 
-/* Grid */
+/* MAIN CONTENT */
 
-.grid-container {
-  display: grid;
-  grid: auto-flow dense / repeat(2, 30%);
-  justify-content: center;
-  align-items: start;
-  gap: 5rem;
-  margin-top: 2.5rem;
+.main-content.grid-two-cols-30-30 {
+  grid-auto-flow: dense;
 }
 
 /* (4n-1) so that 3rd, 7th, 11th etc grid cells are put in the second column, 
@@ -148,66 +229,17 @@ button:hover {
     text cells don't fill.
     */
 
-.grid:nth-child(4n-1) {
+.col-alternate:nth-child(4n-1) {
   grid-column: 2;
 }
 
-.grid-text p {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: #696969;
-}
-
-.grid-text h1 {
-  margin: 0;
-  font-size: 2.3rem;
-}
-
 .grid-image img {
-  border-radius: 10px;
   max-width: 100%;
 }
 
-.image-as-background {
-  display: flex;
-  /* flex-flow: nowrap; */
-  align-items: center;
-  /* justify-content: flex-start; */
-  padding: 0.5rem;
-  text-align: center;
-  font-size: 1.2rem;
-}
+/* END OF MAIN CONTENT */
 
-.image-as-background > div {
-  position: absolute;
-  max-width: 200px;
-  margin: 0;
-  padding: 0.5rem;
-  /* word-break: break-word; */
-  font-size: 0.8rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Glassdoor and CEO */
-.glassdoor-CEO {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5rem;
-  height: 75vh;
-  margin-top: 5rem;
-}
-
-.glassdoor {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 2rem;
-  text-align: center;
-}
+/* TESTIMONY */
 
 .glassdoor button {
   background-color: #04ab3e;
@@ -215,26 +247,13 @@ button:hover {
   font-weight: normal;
 }
 
-.glassdoor-CEO q {
-  padding: 50px 0 0;
-  font-size: 1rem;
-  font-weight: bold;
+.glassdoor button:hover {
+  background-color: #8db38b;
 }
 
-.image-as-background > .text-container-on-CEO {
-  max-width: 300px;
-}
+/* END OF TESTIMONY  */
 
-.CEO img {
-  width: 100%;
-}
-
-/* card */
-
-.card-container {
-  display: flex;
-  justify-content: center;
-}
+/* CARD */
 
 .card {
   height: 250px;
@@ -242,37 +261,47 @@ button:hover {
   border-radius: 10px;
   box-shadow: 0 1.5px 20px 3px #d3d3d3;
   margin: 15px;
+  padding: 0 3rem;
 }
 
 .card > h2 {
-  width: 60%;
   word-break: break-word;
-  text-align: center;
-}
-
-.footer-container h3 {
-  margin: 0%;
-}
-
-.grid-two-column {
-  display: grid;
-  gap: 5rem;
-  grid-template-columns: repeat(2, 30%);
-  grid-template-areas: "col-1 col-2";
-  justify-content: center;
 }
 
 footer p {
   margin: 0;
-  color: #2d5046;
   font-size: 0.7rem;
 }
 
-@media (max-width: 900px) {
-  .sm-grid-one-column {
+footer a {
+  color: #696969;
+  text-decoration: underline;
+}
+
+/* END OF CARD */
+
+/* STYLING FOR SMALLER DEVICES */
+@media (max-width: 768px) {
+  /* UTILITY CLASSES */
+
+  .sm-grid-one-col {
     grid-template-columns: repeat(1, 80%);
-    gap: 0;
+    gap: 1rem;
   }
+
+  .sm-text-vw-s {
+    font-size: 2.5vw;
+  }
+
+  .sm-text-tw-xs {
+    font-size: 2vw;
+  }
+
+  .sm-w-vw-80 {
+    width: 80vw;
+  }
+
+  /* END OF UTILITY CLASSES */
 
   /* Navbar */
   .hamburger-menu {
@@ -317,42 +346,13 @@ footer p {
     text-align: center;
   }
   /* Grid */
-  .grid-container {
-    grid: auto-flow / repeat(1, 80%);
-    gap: 1rem;
-  }
 
-  .grid:nth-child(4n-1) {
+  .col-alternate:nth-child(4n-1):nth-child(4n-1) {
     grid-column: 1;
-  }
-
-  .grid-image:nth-child(-n + 4) {
-    margin-bottom: 2.5rem;
-  }
-
-  .image-as-background > div {
-    max-width: 100px;
-    font-size: 0.4rem;
-  }
-
-  .image-as-background button {
-    font-size: 0.7rem;
-    max-width: 80px;
-  }
-
-  .image-as-background > .text-container-on-CEO {
-    /* align-items: start; */
-    left: -60px;
-  }
-
-  .glassdoor-CEO q {
-    font-size: 0.5rem;
-    width: 50%;
   }
 
   .card-container {
     flex-direction: column;
-    align-items: center;
   }
 
   .card {
