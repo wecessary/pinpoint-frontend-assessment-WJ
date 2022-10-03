@@ -111,10 +111,6 @@ a:hover {
   gap: 5rem;
 }
 
-.w-100pc {
-  width: 100%;
-}
-
 .w-70pc {
   width: 70%;
 }
@@ -147,7 +143,7 @@ a:hover {
   position: absolute;
 }
 
-.m0 {
+.m-0 {
   margin: 0;
 }
 
@@ -167,6 +163,10 @@ a:hover {
   margin-bottom: 2.5rem;
 }
 
+.mx-m {
+  margin: 0 2.5rem;
+}
+
 .my-m {
   margin: 2.5rem 0;
 }
@@ -179,7 +179,7 @@ a:hover {
 
 /* END OF UTILITY CLASSES */
 
-/* Navbar */
+/* NAVBAR */
 .navbar {
   margin: 2rem;
   font-weight: 500;
@@ -203,7 +203,9 @@ a:hover {
   height: 3px;
 }
 
-/* Hero */
+/* END OF NAVBAR */
+
+/* HERO */
 
 .hero-image {
   height: 75vh;
@@ -216,6 +218,8 @@ a:hover {
 .hero-text {
   color: #fff;
 }
+
+/* END OF HERO */
 
 /* MAIN CONTENT */
 
@@ -264,9 +268,9 @@ a:hover {
   padding: 0 3rem;
 }
 
-.card > h2 {
-  word-break: break-word;
-}
+/* END OF CARD */
+
+/* FOOTER */
 
 footer p {
   margin: 0;
@@ -278,15 +282,19 @@ footer a {
   text-decoration: underline;
 }
 
-/* END OF CARD */
+/* END OF FOOTER */
 
 /* STYLING FOR SMALLER DEVICES */
 @media (max-width: 768px) {
-  /* UTILITY CLASSES */
+  /* UTILITY CLASSES (SMALLER DEVICES) */
 
   .sm-grid-one-col {
     grid-template-columns: repeat(1, 80%);
     gap: 1rem;
+  }
+
+  .sm-grid-two-cols-58-2 {
+    grid-template-columns: 58% 2%;
   }
 
   .sm-text-vw-s {
@@ -301,9 +309,9 @@ footer a {
     width: 80vw;
   }
 
-  /* END OF UTILITY CLASSES */
+  /* END OF UTILITY CLASSES (SMALLER DEVICES) */
 
-  /* Navbar */
+  /* NAVBAR (SMALLER DEVICES) */
   .hamburger-menu {
     display: flex;
   }
@@ -341,16 +349,25 @@ footer a {
   .navbar-end-button.active {
     display: block;
   }
-  /* Hero */
+
+  /* END OF NAVBAR (SMALLER DEVICES)  */
+
+  /* HERO (SMALLER DEVICES) */
   .hero-text h1 {
     text-align: center;
   }
-  /* Grid */
+
+  /* END OF HERO (SMALLER DEVICES) */
+
+  /* MAIN CONTENT (SMALLER DEVICES) */
 
   .col-alternate:nth-child(4n-1):nth-child(4n-1) {
     grid-column: 1;
   }
 
+  /* END OF MAIN CONTENT (SMALLER DEVICES) */
+
+  /* CARD (SMALLER DEVICES) */
   .card-container {
     flex-direction: column;
   }
@@ -358,4 +375,5 @@ footer a {
   .card {
     width: 80%;
   }
+  /* END OF CARD (SMALLER DEVICES) */
 }
